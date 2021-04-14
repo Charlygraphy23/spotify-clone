@@ -1,0 +1,165 @@
+.login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  place-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.9);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.login .btn__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  place-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 50%;
+}
+
+.login .btn__container a {
+  background-color: #15883e;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  color: white;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  letter-spacing: 2px;
+}
+
+.login .btn__container a:hover {
+  background-color: #3ecc70;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  text-decoration: none;
+}
+
+.auth__route {
+  background: -webkit-gradient(linear, left bottom, left top, from(black), to(#334f49));
+  background: linear-gradient(0deg, black 0%, #334f49 100%);
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  height: 100vh;
+}
+
+.navbar {
+  background: transparent;
+}
+
+.navbar #navbarDropdown {
+  color: white;
+  font-size: 0.8rem;
+}
+
+.navbar .nav__profile__link {
+  background-color: #1f1f1f;
+  padding: 0px 3px;
+  border-radius: 50px;
+}
+
+.navbar .nav__profile__link .dropdown-menu {
+  background-color: #1f1f1f;
+  max-width: 200px;
+  left: -15px;
+  padding: 4px 4px;
+}
+
+.navbar .nav__profile__link .dropdown-menu .dropdown-item {
+  color: #b3b3b3;
+}
+
+.navbar .nav__profile__link .dropdown-menu .dropdown-item:hover {
+  background-color: #282828;
+  border-radius: 3px;
+  color: white;
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+}
+
+.sidebar {
+  background: black;
+  min-width: 200px;
+}
+
+.sidebar .hover_shadow_li li {
+  padding: 8px 5px;
+}
+
+.sidebar .hover_shadow_li li:hover {
+  background-color: #282828;
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+  border-radius: 4px;
+}
+
+.sidebar .side_menu li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  place-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  text-overflow: ellipsis;
+  margin: 0px 0.5rem;
+  padding: 5px 5px;
+}
+
+.sidebar .side_menu li:hover :is(i, p) {
+  color: white;
+  cursor: pointer;
+}
+
+.sidebar .side_menu li .liked_div {
+  background: #d6d6d6;
+  background: linear-gradient(338deg, #d6d6d6 0%, #3d1ea8 100%);
+  border-radius: 2px;
+}
+
+.sidebar .side_menu li .liked_div i {
+  font-size: 0.7rem;
+  color: white;
+}
+
+.sidebar .side_menu li i {
+  color: #b3b3b3;
+  margin: 0px 0.5em;
+  font-size: 1.2rem;
+}
+
+.sidebar .side_menu li p {
+  color: #b3b3b3;
+  margin-bottom: 0px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.player {
+  background: red;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+* {
+  margin: 0px;
+  text-align: left;
+}
+/*# sourceMappingURL=style.css.map */

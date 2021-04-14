@@ -1,0 +1,59 @@
+.login_page {
+}
+.login_page .header {
+	text-align: center;
+	border-bottom: 1px solid var(--border-color);
+}
+.login_page .sign_in__options li {
+	text-align: center;
+	margin: 8px;
+}
+.login_page .sign_in__options li .text {
+	font-size: 0.8rem;
+}
+.login_page .sign_in__options li .google__button {
+	padding: 0.5em 5em;
+	background-color: white;
+	border: 2px solid var(--button-border-color);
+	border-radius: 30px;
+	color: var(--font-color-v1);
+	font-weight: 500;
+	letter-spacing: 3px;
+}
+.login_page .footer button {
+	padding: 0.5em 5em;
+	background-color: white;
+	border: 2px solid var(--button-border-color);
+	border-radius: 30px;
+	color: var(--font-color-v1);
+	font-weight: 500;
+	letter-spacing: 3px;
+	transition: 0.1s all linear;
+}
+
+.login_page .footer button:hover {
+	background-color: var(--button-border-color);
+	color: white;
+	border: transparent;
+}
+.login_page .sign_in__options li .google__button {
+	padding: 0.5em 5em;
+	background-color: white;
+	border: 2px solid var(--button-border-color);
+	border-radius: 30px;
+	color: var(--font-color-v1);
+	font-weight: 500;
+	letter-spacing: 3px;
+}
+
+.login_page .sign_in__options .devider__ {
+	place-items: center;
+	max-width: 700px;
+	margin: auto;
+}
+.login_page .sign_in__options .devider__ .line__border {
+	height: 2px;
+	background-color: var(--border-color);
+	width: 28%;
+	margin: 10px;
+}

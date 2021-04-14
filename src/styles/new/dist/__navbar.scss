@@ -1,0 +1,31 @@
+.navbar {
+  background: transparent;
+
+  #navbarDropdown {
+    color: white;
+    font-size: 0.8rem;
+  }
+
+  .nav__profile__link {
+    background-color: $spotify__background;
+    padding: 0px 3px;
+    border-radius: 50px;
+
+    .dropdown-menu {
+      background-color: $spotify__background;
+      max-width: 200px;
+      left: -15px;
+      padding: 4px 4px;
+
+      .dropdown-item {
+        color: $inactive_text_color;
+        &:hover {
+          background-color: $sidebar_text_hover;
+          border-radius: 3px;
+          color: white;
+          transition: 0.3s all ease-in-out;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,88 @@
+::placeholder {
+	color: var(--font-color-v1);
+	opacity: 1;
+}
+
+:-ms-input-placeholder {
+	/* Internet Explorer 10-11 */
+	color: var(--font-color-v1);
+}
+
+::-ms-input-placeholder {
+	/* Microsoft Edge */
+	color: var(--font-color-v1);
+}
+
+.forms {
+	width: 100%;
+	max-width: 30rem;
+}
+
+.forms .form__groups label {
+	font-weight: 500;
+	margin-bottom: 0px;
+}
+
+.forms .form__groups input {
+	width: 100%;
+	border: 1px solid var(--input-border-v1);
+	padding: 0.5rem 1rem;
+	transition: 0.3s all linear;
+}
+
+.forms .form__groups :is(input:focus, input:active) {
+	outline: none;
+	border: 1px solid var(--input-border-v2);
+}
+.forms .login__button button {
+	background-color: var(--spotify-color);
+	color: white;
+	width: 12em;
+	text-align: center;
+	padding: 0.6em;
+	border-radius: 30px;
+	font-weight: 500;
+	letter-spacing: 2px;
+	transition: 0.3s all linear;
+}
+
+.forms .login__button button:hover {
+	background-color: var(--spotify-color-hover);
+}
+
+.forms .check__box .input__box {
+	width: 20px;
+	height: 20px;
+	border: 1px solid var(--border-color);
+	border-radius: 5px;
+	position: relative;
+}
+.forms .check__box .input__box .tic__ {
+	text-align: center;
+	font-size: 1rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+	z-index: 2;
+	color: white;
+}
+.forms .check__box :is(.input__box:hover, label:hover) {
+	cursor: pointer;
+}
+.forms .check__box label {
+	margin: 5px;
+}
+.forms .check__box {
+	display: flex;
+	place-items: center;
+}
+
+.forms .check__box input:checked ~ .input__box {
+	background: var(--spotify-color);
+}
+
+.forms .check__box input:checked ~ .input__box .tic__ {
+	display: block;
+}
