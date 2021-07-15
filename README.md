@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+This is Spotify clone, build this to learning purposes
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -28,6 +30,14 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+## Stack
+
+React (create-react-app)
+Redux
+Bootstrap
+Scss
+Spotify Api
 
 ## Preview
 
