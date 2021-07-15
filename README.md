@@ -33,11 +33,11 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## Stack
 
-React (create-react-app)
-Redux
-Bootstrap
-Scss
-Spotify Api
+- React (create-react-app)\
+- Redux\
+- Bootstrap\
+- Scss\
+- Spotify Api\
 
 ## Preview
 
