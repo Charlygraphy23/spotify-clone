@@ -1,8 +1,11 @@
 import React from "react";
 import logo from "../assets/Spotify_Logo_RGB_White.png";
 import SidbarLinks from "./forms-login/SidbarLinks";
+import { useSelector } from "react-redux";
 
 const SideBar = () => {
+  const { playlist } = useSelector((state) => state.UserReducer);
+
   return (
     <>
       <div className="d-flex justify-content-start mx-3 mt-3">
@@ -31,6 +34,13 @@ const SideBar = () => {
         <span className="text-white">PLAYLIST</span>
       </p>
       <hr className="mt-2 mx-3" style={{ backgroundColor: "gray" }} />
+
+      <ul className="side_menu_playlist mt-4">
+        {playlist &&
+          playlist.map((value, i) => (
+            <SidbarLinks key={i} iconLabels="" text={value?.name} />
+          ))}
+      </ul>
     </>
   );
 };

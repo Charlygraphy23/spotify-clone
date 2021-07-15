@@ -1,0 +1,210 @@
+.album {
+  overflow: auto;
+  height: 100vh;
+  padding-bottom: 3rem;
+  transition: 0.3 all ease-in-out;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    // margin-right: 10px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    width: 20px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  .album__header {
+    display: flex;
+    padding: 1.5rem;
+    padding-top: 8rem;
+    color: white;
+    background-color: rgb(232, 32, 40);
+
+    .image__feed {
+      padding: 0px 1rem;
+      img {
+        width: 200px;
+        height: 200px;
+        -o-object-fit: cover;
+        object-fit: cover;
+        box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.6);
+      }
+    }
+
+    .album__info {
+      padding: 0px 1rem;
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+
+      .album__title {
+        font-weight: 900;
+        font-size: 4rem;
+      }
+      p {
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: $inactive_text_color;
+        margin: 0px;
+        b {
+          color: white;
+        }
+      }
+    }
+
+    @media screen and (max-width: 990px) {
+      .image__feed {
+        img {
+          width: 150px;
+          height: 150px;
+        }
+      }
+
+      .album__info {
+        .album__title {
+          font-size: 3rem;
+        }
+        p {
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+
+  .album__playlist {
+    padding: 1.5rem;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.8) 88%,
+      rgba(168, 30, 30, 0.9556197478991597) 100%
+    );
+    .header {
+      place-items: center;
+      margin-bottom: 1rem;
+      .play__button {
+        @include flexCenter(center, center, row);
+        color: white;
+        background-color: $spotify__color__hover;
+        border-radius: 100%;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        margin: 0px 20px;
+
+        i {
+          font-size: 2rem;
+        }
+
+        &:hover {
+          transform: scale(1.1);
+          transition: 0.2s all ease-in-out;
+        }
+      }
+      .like {
+        font-size: 2rem;
+        margin: 0px 20px;
+        color: $inactive_text_color;
+      }
+    }
+
+    .table__header {
+      display: flex;
+      color: rgba(255, 255, 255, 0.4);
+      margin-left: 40px;
+      //   margin-bottom: 1.5rem;
+      margin-top: 30px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      padding-bottom: 10px;
+      .hash {
+        flex: 0.03;
+      }
+      .table__title {
+        flex: 1;
+      }
+      .table__time {
+        flex: 0.1;
+      }
+    }
+
+    .table__header__stiky {
+      position: absolute;
+      top: 70px;
+      width: 100%;
+      left: 0px;
+      background-color: $spotify__background;
+      color: white;
+      margin: 0px;
+      padding-top: 10px;
+    }
+    .table__body {
+      display: flex;
+      color: rgba(255, 255, 255, 0.4);
+      margin-left: 40px;
+      margin: 1.5rem;
+      padding: 5px 0px;
+
+      &:hover {
+        background-color: $sidebar_text_hover;
+        border-radius: 5px;
+        cursor: pointer;
+
+        .song__info {
+          span {
+            text-decoration: underline;
+            color: white;
+          }
+        }
+      }
+
+      .index {
+        flex: 0.03;
+      }
+      .song__info {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        p {
+          margin: 0px;
+          font-size: 1rem;
+          color: white;
+        }
+        span {
+          line-height: 0.8;
+          font-size: 0.8rem;
+        }
+      }
+      .time {
+        flex: 0.1;
+      }
+    }
+
+    @media screen and (max-width: 990px) {
+      .header {
+        .play__button {
+          width: 40px;
+          height: 40px;
+
+          i {
+            font-size: 1rem;
+          }
+        }
+
+        .like {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

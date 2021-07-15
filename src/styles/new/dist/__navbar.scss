@@ -1,5 +1,28 @@
 .navbar {
-  background: transparent;
+  // background: transparent;
+  padding: 15px 20px;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  z-index: 1000;
+  transition: 0.3 all ease-in-out;
+  .nav__page {
+    color: white;
+    font-size: 1.3rem;
+    width: 40px;
+    height: 40px;
+    background: $font__color__v1;
+    border-radius: 100%;
+    @include flexCenter(center, center, row);
+    border: 0.1rem solid rgba(204, 200, 200, 0.419);
+
+    i {
+      @include flexCenter(center, center, row);
+    }
+  }
+  .nav__page__disabled {
+    background: rgba(0, 0, 0, 0.4);
+  }
 
   #navbarDropdown {
     color: white;
@@ -16,6 +39,7 @@
       max-width: 200px;
       left: -15px;
       padding: 4px 4px;
+      position: absolute;
 
       .dropdown-item {
         color: $inactive_text_color;

@@ -7,7 +7,7 @@ const SidbarLinks = ({ iconLabels, text, imageUrl }) => {
         {imageUrl ? (
           <img src={imageUrl} alt="logo" />
         ) : (
-          <i className={iconLabels}></i>
+          <>{iconLabels && <i className={iconLabels}></i>}</>
         )}
         <p>{text}</p>
       </li>

@@ -1,6 +1,7 @@
 .sidebar {
   background: rgba(0, 0, 0, 1);
   min-width: 200px;
+  overflow: hidden;
   .hover_shadow_li {
     li {
       padding: 8px 5px;
@@ -48,6 +49,38 @@
         font-weight: 500;
         font-size: 0.9rem;
       }
+    }
+  }
+
+  .side_menu_playlist {
+    @extend .side_menu;
+    max-height: 500px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 10px;
+      // margin-right: 10px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: transparent;
+      width: 20px;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: #888;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+    p {
+      font-weight: normal !important;
+      padding: 0px 10px;
+      font-size: 0.8rem !important;
     }
   }
 }

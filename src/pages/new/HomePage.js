@@ -5,7 +5,11 @@ import SpotifyWebApi from "spotify-web-api-js";
 
 import AuthRoute from "../../routes/AuthRoute";
 import { useDispatch } from "react-redux";
-import { getUserDetails } from "../../store/user/action.types";
+import {
+  getUserDetails,
+  getPlaylist,
+  setPlaylistTracks,
+} from "../../store/user/action.types";
 
 const spotify = new SpotifyWebApi();
 
@@ -30,7 +34,21 @@ const HomePage = () => {
 
   const setPlaylist = useCallback(() => {
     spotify.getUserPlaylists().then((data) => {
-      console.log("Get Playlists", data);
+      dispatch(getPlaylist(data?.items));
+    });
+
+    spotify.getPlaylist("37i9dQZEVXcDzUMvVduT9v").then((data) => {
+      // console.log("Data", data);
+      dispatch(setPlaylistTracks(data));
+    });
+  }, [dispatch]);
+
+  const getCurrentlyPlaySong = useCallback(() => {
+    spotify.play().then((data) => {
+      console.log("DD", data);
+    });
+    spotify.getMyDevices().then((data) => {
+      console.log("Device id", data);
     });
   }, []);
 
@@ -45,6 +63,7 @@ const HomePage = () => {
       localStorage.setItem("token%", JSON.stringify(hasToken.access_token));
       getMe();
       setPlaylist();
+      getCurrentlyPlaySong();
     } else {
       if (localStorage.getItem("token%")) {
         let token = JSON.parse(localStorage.getItem("token%"));
@@ -52,6 +71,7 @@ const HomePage = () => {
         setToken(token);
         getMe();
         setPlaylist();
+        getCurrentlyPlaySong();
       }
     }
   }, [dispatch, getMe]);
